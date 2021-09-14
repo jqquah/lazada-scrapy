@@ -1,0 +1,20 @@
+2021-09-14 17:16:02 [scrapy] ERROR: Error caught on signal handler: <bound method CrawlManager.spider_idle of <scrapyrt.core.CrawlManager object at 0x7fc8a3b5e520>>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/scrapy/utils/signal.py", line 32, in send_catch_log
+    response = robustApply(receiver, signal=signal, sender=sender, *arguments, **named)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/scrapyrt/core.py", line 166, in spider_idle
+    callback = getattr(self.crawler.spider, self.callback_name)
+AttributeError: 'LazadaSpider' object has no attribute 'parse_foo'
+2021-09-14 17:16:02 [scrapy] INFO: Closing spider (finished)
+2021-09-14 17:16:02 [scrapy] INFO: Dumping Scrapy stats:
+{'elapsed_time_seconds': 0.010707,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 9, 14, 9, 16, 2, 251976),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'memusage/max': 55468032,
+ 'memusage/startup': 55468032,
+ 'start_time': datetime.datetime(2021, 9, 14, 9, 16, 2, 241269)}
+2021-09-14 17:16:02 [scrapy] INFO: Spider closed (finished)
